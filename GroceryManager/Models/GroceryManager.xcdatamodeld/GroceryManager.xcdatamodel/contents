@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DinnerList" representedClassName="DinnerList" syncable="YES" codeGenerationType="class">
+        <relationship name="menuItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MenuItem" inverseName="dinnerList" inverseEntity="MenuItem"/>
+    </entity>
+    <entity name="Instruction" representedClassName="Instruction" syncable="YES">
+        <attribute name="order" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="text" attributeType="String"/>
+        <relationship name="instructionList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InstructionList" inverseName="instructions" inverseEntity="InstructionList"/>
+    </entity>
+    <entity name="InstructionList" representedClassName="InstructionList" syncable="YES">
+        <attribute name="title" attributeType="String"/>
+        <relationship name="instructions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Instruction" inverseName="instructionList" inverseEntity="Instruction"/>
+        <relationship name="menuItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MenuItem" inverseName="instructionList" inverseEntity="MenuItem"/>
+    </entity>
+    <entity name="MenuItem" representedClassName="MenuItem" syncable="YES" codeGenerationType="class">
+        <attribute name="title" attributeType="String"/>
+        <relationship name="dinnerList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DinnerList" inverseName="menuItem" inverseEntity="DinnerList"/>
+        <relationship name="instructionList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InstructionList" inverseName="menuItem" inverseEntity="InstructionList"/>
+        <relationship name="menuList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MenuList" inverseName="menuItem" inverseEntity="MenuList"/>
+    </entity>
+    <entity name="MenuList" representedClassName="MenuList" syncable="YES" codeGenerationType="class">
+        <relationship name="menuItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MenuItem" inverseName="menuList" inverseEntity="MenuItem"/>
+    </entity>
+    <elements>
+        <element name="DinnerList" positionX="-105.9957885742188" positionY="60.08700561523438" width="128" height="44"/>
+        <element name="Instruction" positionX="-242.5739135742188" positionY="635.0457153320312" width="128" height="74"/>
+        <element name="InstructionList" positionX="-319.5751342773438" positionY="463.5882873535156" width="128" height="74"/>
+        <element name="MenuItem" positionX="-248.2784423828125" positionY="241.760009765625" width="128" height="89"/>
+        <element name="MenuList" positionX="-396.68310546875" positionY="57.23121643066406" width="128" height="44"/>
+    </elements>
+</model>

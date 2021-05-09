@@ -11,6 +11,13 @@
 		A40659522646C19A0077D78A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40659512646C19A0077D78A /* ContentView.swift */; };
 		A40659542646C19F0077D78A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40659532646C19F0077D78A /* Assets.xcassets */; };
 		A40659572646C19F0077D78A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40659562646C19F0077D78A /* Preview Assets.xcassets */; };
+		A4FD95902646C67B00030FA2 /* GroceryManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4FD958E2646C67B00030FA2 /* GroceryManager.xcdatamodeld */; };
+		A4FD95962646D3F800030FA2 /* Instruction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD95942646D3F800030FA2 /* Instruction+CoreDataClass.swift */; };
+		A4FD95972646D3F800030FA2 /* Instruction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD95952646D3F800030FA2 /* Instruction+CoreDataProperties.swift */; };
+		A4FD959C2646D89900030FA2 /* AddInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD959B2646D89900030FA2 /* AddInstructionView.swift */; };
+		A4FD95C02646E23900030FA2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD95BF2646E23900030FA2 /* Persistence.swift */; };
+		A4FD95C426478CE900030FA2 /* InstructionList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD95C226478CE900030FA2 /* InstructionList+CoreDataClass.swift */; };
+		A4FD95C526478CE900030FA2 /* InstructionList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD95C326478CE900030FA2 /* InstructionList+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		A40659532646C19F0077D78A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A40659562646C19F0077D78A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A40659582646C19F0077D78A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4FD958F2646C67B00030FA2 /* GroceryManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryManager.xcdatamodel; sourceTree = "<group>"; };
+		A4FD95942646D3F800030FA2 /* Instruction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instruction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A4FD95952646D3F800030FA2 /* Instruction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instruction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A4FD959B2646D89900030FA2 /* AddInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstructionView.swift; sourceTree = "<group>"; };
+		A4FD95BF2646E23900030FA2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A4FD95C226478CE900030FA2 /* InstructionList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstructionList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A4FD95C326478CE900030FA2 /* InstructionList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InstructionList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +66,9 @@
 		A406594E2646C19A0077D78A /* GroceryManager */ = {
 			isa = PBXGroup;
 			children = (
-				A406594F2646C19A0077D78A /* GroceryManagerApp.swift */,
-				A40659512646C19A0077D78A /* ContentView.swift */,
-				A40659532646C19F0077D78A /* Assets.xcassets */,
-				A40659582646C19F0077D78A /* Info.plist */,
-				A40659552646C19F0077D78A /* Preview Content */,
+				A4FD95992646D49700030FA2 /* View */,
+				A4FD95922646C68100030FA2 /* Models */,
+				A406595F2646C1C10077D78A /* App */,
 			);
 			path = GroceryManager;
 			sourceTree = "<group>";
@@ -67,6 +79,39 @@
 				A40659562646C19F0077D78A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A406595F2646C1C10077D78A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A406594F2646C19A0077D78A /* GroceryManagerApp.swift */,
+				A40659532646C19F0077D78A /* Assets.xcassets */,
+				A40659582646C19F0077D78A /* Info.plist */,
+				A40659552646C19F0077D78A /* Preview Content */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A4FD95922646C68100030FA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4FD95C226478CE900030FA2 /* InstructionList+CoreDataClass.swift */,
+				A4FD95C326478CE900030FA2 /* InstructionList+CoreDataProperties.swift */,
+				A4FD95942646D3F800030FA2 /* Instruction+CoreDataClass.swift */,
+				A4FD95952646D3F800030FA2 /* Instruction+CoreDataProperties.swift */,
+				A4FD95BF2646E23900030FA2 /* Persistence.swift */,
+				A4FD958E2646C67B00030FA2 /* GroceryManager.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4FD95992646D49700030FA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A40659512646C19A0077D78A /* ContentView.swift */,
+				A4FD959B2646D89900030FA2 /* AddInstructionView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FD95C426478CE900030FA2 /* InstructionList+CoreDataClass.swift in Sources */,
+				A4FD95962646D3F800030FA2 /* Instruction+CoreDataClass.swift in Sources */,
+				A4FD95902646C67B00030FA2 /* GroceryManager.xcdatamodeld in Sources */,
 				A40659522646C19A0077D78A /* ContentView.swift in Sources */,
+				A4FD95C02646E23900030FA2 /* Persistence.swift in Sources */,
+				A4FD95C526478CE900030FA2 /* InstructionList+CoreDataProperties.swift in Sources */,
+				A4FD959C2646D89900030FA2 /* AddInstructionView.swift in Sources */,
 				A40659502646C19A0077D78A /* GroceryManagerApp.swift in Sources */,
+				A4FD95972646D3F800030FA2 /* Instruction+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +320,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"GroceryManager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GroceryManager/App/Preview Content\"";
 				DEVELOPMENT_TEAM = J369RA97DW;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GroceryManager/Info.plist;
+				INFOPLIST_FILE = GroceryManager/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,10 +342,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"GroceryManager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GroceryManager/App/Preview Content\"";
 				DEVELOPMENT_TEAM = J369RA97DW;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GroceryManager/Info.plist;
+				INFOPLIST_FILE = GroceryManager/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -328,6 +380,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A4FD958E2646C67B00030FA2 /* GroceryManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A4FD958F2646C67B00030FA2 /* GroceryManager.xcdatamodel */,
+			);
+			currentVersion = A4FD958F2646C67B00030FA2 /* GroceryManager.xcdatamodel */;
+			path = GroceryManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A40659442646C19A0077D78A /* Project object */;
 }
